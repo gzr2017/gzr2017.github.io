@@ -6,12 +6,14 @@
     <title>扇子</title>
 
     <style>
-        body {
-            background: url(http://p2p0dadp7.bkt.clouddn.com/shanzi1.png) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+        #bcg {
+            position: absolute;
+            z-index: 0;
+        }
+
+        #img {
+            position: absolute;
+            z-index: 1;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -343,13 +345,22 @@
 </head>
 
 <body>
-    <img src="http://p2p0dadp7.bkt.clouddn.com/shanzi2.png" id="img" />
+
+    <div style="position:relative;">
+        <img src="http://p2p0dadp7.bkt.clouddn.com/shanzi1.png" id="bcg"></div>
+    <img src="http://p2p0dadp7.bkt.clouddn.com/shanzi2.png" id="img"></div>
+    </div>
     <script>
-        var angle = 0,
-            img = document.getElementById('container');
+        var roan = 0;
+        var img = document.getElementById('container');
         if (window.DeviceOrientationEvent) {
             window.addEventListener('deviceorientation', function (event) {//监听设备陀螺仪
-                $("#img").rotate(event.alpha);
+                if (-45 < event.gamma && event.gamma < 45)
+                    roan = ((event.gamma) + 45) / 2;
+                $("#img").rotate({
+                    angle: roan,
+                    center: ["39.2%", "72%"],
+                })
             });
         } else {
             document.querySelector('body').innerHTML = '你的浏览器不支持哦~用移动端试试吧！';
