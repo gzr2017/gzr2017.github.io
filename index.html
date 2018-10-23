@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
     <!--Import Google Icon Font-->
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Add the slick-theme.css if you want default styling -->
@@ -22,80 +20,22 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
-
-
 </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav class="black">
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo" style="font-family: pacifico, sans-serif;">RuojunBai</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="fan.html">My Work</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <nav class="grey darken-4">
-        <div class="nav-wrapper">
-            <div class="col s12">
-                <a href="#!" class="breadcrumb">Home</a>
-                <a href="#!" class="breadcrumb" style="font-family: flood-std, sans-serif;">MAN IN A CASE</a>
-            </div>
-        </div>
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">About Me</a></li>
-        <li><a href="fan.html">My Work</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact Me</a></li>
-    </ul>
-
-
-
+    <img src="resource/title.GIF" width="100%">
 
     <main>
-        <br /> <br />
+        <br />
         <div class="row">
             <div class="col s12">
                 <video class="responsive-video" controls>
                     <source src="resource/sample_video.MOV" type="video/mp4">
                 </video>
             </div>
-        </div>
-        <div class="row">
             <div class="col s12">
-                <p class="flow-text white-text">
-                    中文 Web 阅读体验
-                    关于制造中文 Web 阅读体验过程中的一些思考结论。
-                    正文字体的尺寸应该使用固定的偶数像素单位，如 12px，14px，16px 等，一个例外情况就是 15px 像素也是相当不错的正文字体的尺寸。由于中文 Windows 操作系统及部分的 Linux
-                    发行版使用的是像素字库，因此，这几个尺寸的字体在显示效果上最佳。而在 Mac OS X 上，因为 Mac OS X 使用的是矢量字库，则在各种尺寸下显示效果都不错。另外就是，Mac OS X
-                    的中文矢量字库中内嵌了 12px 的像素字库。
-                    blockquote、ol、ul 等 HTML 元素内的文字应该在顶端和尾端留出至少 10px 的空白，在左端留出 20px 左右的空白，右端 10px 左右。在 CSS 语法中这些空白应该使用
-                    margin 方式设置，padding 方式不提倡使用。padding 可以用来实现其他视觉效果。
-                    不要随意在正文和标题中使用拉丁等宽字体，除非是为了一些艺术上的用意。拉丁等宽字体应该用在和模拟打印制品或者程序源代码有关的场合。
-                    不要在任何地方强制指定使用任何的艺术中文字体，比如“魏碑”之类，这将在超过一半以上的计算机上，尤其是非 Windows 操作系统的计算机上不会显示出任何效果。
-                    应该对大部分文字的 line-height 属性进行强制指定，一个经验是，对于正文文字，line-height 数值可以指定为这些文字的 font-size 的像素值的 1.6
-                    倍左右。如果是标题文字的话，1.3 倍左右。
-                    中文正文及标题中出现的标点符号应该使用全角方式输入。
-                    中文正文及标题中出现的英文及数字应该使用半角方式输入，并且在左右各留一个半角空格。如果这些这些半角英文及数字的左边或者右边紧接着任何的中文全角括号或者其他标点符号的话，则不需要加入半角空格。
-                    中文全角空格应该只在标题处使用。此外，在 Web 上的文字的正文的段落开头是否使用两个全角空格是个人喜好问题，反正我不喜欢用，因为这些全角空格有些浪费存储空间，且对快速扫描式的阅读没有太大帮助。
-                    在 Web 上的文字，是被人们用眼睛来扫描的，绝大部分都不会被人仔细阅读。
-                    中文字体的粗体和斜体显示效果不推荐使用。在大部分非 Windows 操作系统上，这些效果都不被字库或者浏览器支持。而在 Windows 操作系统上，这些效果也不够理想。粗体中文显示效果在
-                    Windows 操作系统上会让部分笔画连接在一起而使得文字难以被辨认，而斜体中文显示效果则会使得部分笔画消失，也非常难以被辨认。如果一定要使用此二种效果，则要么通过 CSS 的
-                    font-weight 方式指定，要么通过 strong 和 em 标签，而不要使用 b 和 i 标签。
-                    中文的段落与段落之间应该留出一个完整的空行。即每个段落使用一对闭合的 p 标签在不加 CSS 时候的效果，或者是使用两个 br 标签时产生的效果。注意，这个空行的高度会受到 line-height
-                    的影响，因此不要把 line-height 设置为太高的数值，否则将使得两个段落之前的视觉联系减弱，导致影响阅读时候的思路连贯。
-                    如果文字是要被通过 RSS 输出的，则可以考虑在其中加入一份内嵌样式表，对于 ol、ul、blockquote
-                    等元素的样式尤其需要控制。这样可以保证即使文字被显示在其他网站，其样式也依然可以保持统一，如果没有被聚合器过滤 HTML 标签的话。
-                    以上这些，是我在写任何 HTML 文档时候的指导原则。比如，V2EX 的所有文档及 UBB 转换器都尽量符合这些原则。
-                    <!-- 春江潮水连海平，海上明月共潮生。<br />
+                <p class="flow-text ">
+                    春江潮水连海平，海上明月共潮生。<br />
                     滟滟随波千万里，何处春江无月明！<br />
                     江流宛转绕芳甸，月照花林皆似霰。<br />
                     空里流霜不觉飞，汀上白沙看不见。<br />
@@ -113,8 +53,6 @@
                     江水流春去欲尽，江潭落月复西斜。<br />
                     斜月沉沉藏海雾，碣石潇湘无限路。<br />
                     不知乘月几人归，落月摇情满江树。<br />
-
-
                     Tender is the night<br />
                     Lying by your side<br />
                     Tender is the touch<br />
@@ -122,20 +60,13 @@
                     Tender is the day<br />
                     The demons go away<br />
                     Lord I need to find<br />
-                    Someone who can heal my mind -->
+                    Someone who can heal my mind
                 </p>
             </div>
-        </div>
-
-
-
-
-        <div class="row">
             <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="resource/3个可以玩的/1.gif">
-
                     </div>
                     <div class="card-content">
                         <p>The quick brown fox jumps over the lazy dog</p>
@@ -149,7 +80,6 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="resource/3个可以玩的/2.gif">
-
                     </div>
                     <div class="card-content">
                         <p>The quick brown fox jumps over the lazy dog</p>
@@ -163,7 +93,6 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="resource/3个可以玩的/3.gif">
-
                     </div>
                     <div class="card-content">
                         <p>The quick brown fox jumps over the lazy dog</p>
@@ -196,10 +125,9 @@
                 </div>
             </div>
         </div>
-
-
     </main>
-    <footer class="page-footer black">
+
+    <footer class="page-footer teal">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -225,10 +153,8 @@
             </div>
         </div>
     </footer>
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js'></script>
-    <script src='https://use.fontawesome.com/826a7e3dce.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>

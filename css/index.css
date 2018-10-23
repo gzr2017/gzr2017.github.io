@@ -1,11 +1,7 @@
-
-  
-
-
-  body{
-	background: linear-gradient(180grad, #424242,#212121);
-	font-family: ubuntu, source-han-sans-simplified-c, sans-serif;
-	display: flex;
+  body {
+    background: linear-gradient(180grad, #338185, rgba(84, 149, 135, 1));
+    font-family: ubuntu, source-han-sans-simplified-c, sans-serif;
+    display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
@@ -17,34 +13,34 @@
   }
 
 
- .carousel-wrap {
-	margin: auto;
-	width: 90%;
+  .carousel-wrap {
+    margin: auto;
+    width: 90%;
   }
-  
+
   /* fix blank or flashing items on carousel */
   .owl-carousel .item {
-	position: relative;
-	z-index: 100; 
-	-webkit-backface-visibility: hidden; 
+    position: relative;
+    z-index: 100;
+    -webkit-backface-visibility: hidden;
   }
-  
+
   /* end fix */
-  .owl-nav > div {
-	margin-top: -26px;
-	position: absolute;
-	top: 50%;
-	color: #cdcbcd;
+  .owl-nav>div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
   }
-  
+
   .owl-nav i {
-	font-size: 52px;
+    font-size: 52px;
   }
-  
+
   .owl-nav .owl-prev {
-	left: -30px;
+    left: -30px;
   }
-  
+
   .owl-nav .owl-next {
-	right: -30px;
+    right: -30px;
   }
