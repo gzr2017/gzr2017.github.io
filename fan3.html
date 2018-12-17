@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=0, viewport-fit=cover" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description" content="作品2">
+    <meta name="keywords" content="作品2">
+    <title>index2</title>
+    <script>
+        (function setFontSize () {
+            //动态改变根节点字体大小
+            var docEle = document.documentElement,
+                    evt = "onorientationchange" in window ? "orientationchange" : "resize",
+                    fn = function() {
+                        var width = docEle.clientWidth
+                        var height = docEle.clientHeight
+                        var scale = (width / height) / (750 / 1334)
+                        width && (docEle.style.fontSize = width / (3.75 * scale) + "px")
+                    }
+            window.addEventListener(evt, fn, false)
+            document.addEventListener("DOMContentLoaded", fn, false)
+        })()
+    </script>
+    <link rel="stylesheet" href="./public/css/index2.css">
+</head>
+
+<body>
+  <img class = "back-gif" src = "./public/pic/2.gif" alt = "" />
+  <div class = "container" id = "container">
+    <div class = "div2">
+      <img class = "moveFlower" src = "./public/pic/flower.png" alt = "moving flower" />
+    </div>
+  </div>
+
+<script src = "./public/js/jquery.min.js"></script>
+<script src = "./public/js/hammer.js"></script>
+<script src = "./public/js/index2.js"></script>
+</body>
+</html>
