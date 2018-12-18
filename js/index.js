@@ -1,10 +1,9 @@
 $(document).ready(function () {
     $('.materialboxed').materialbox();
-    $('.tabs').tabs();
+    $('.tabs').tabs()({
+        swipeable: true
+    });
     $('.owl-carousel').owlCarousel();
-});
-$('.tabs').tabs()({
-    swipeable: true
 });
 $('.main-carousel').flickity({
     // options
