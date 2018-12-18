@@ -1,6 +1,6 @@
   body {
-    /* background: linear-gradient(180grad, #009688, #009688); */
-    font-family: ubuntu, source-han-sans-simplified-c, sans-serif;
+    font-family:cormorant-garamond, serif;
+    font-weight: 400;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
