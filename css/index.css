@@ -5,14 +5,16 @@
 	display:inline-block;
 	text-align:left;
     border-radius:5px;
-	background-color:#e0f7fa ;
+	/* background-color:#e0f7fa ; */
+	background-color:rgb(244, 215, 145) ;
 }
 .triangle{
 	width: 0;
 	height: 0;
 	border-style: solid;
 	border-width:  10px  ;
-	border-color:  #e0f7fa  transparent  transparent;
+	background-color:rgb(244, 215, 145) ;
+	/* border-color:  #e0f7fa  transparent  transparent; */
 	margin-left:15px;
 }
 
