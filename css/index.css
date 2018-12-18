@@ -3,49 +3,22 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #006064;
-
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.carousel-wrap {
-  margin: auto;
-  width: 90%;
-}
-
-.owl-carousel .item {
-  position: relative;
-  z-index: 100;
-  -webkit-backface-visibility: hidden;
-}
-
-/* end fix */
-.owl-nav>div {
-  margin-top: -26px;
-  position: absolute;
-  top: 50%;
-  color: #cdcbcd;
-}
-
-.owl-nav i {
-  font-size: 52px;
-}
-
-.owl-nav .owl-prev {
-  left: -30px;
-}
-
-.owl-nav .owl-next {
-  right: -30px;
+main {
+  flex: 1 0 auto;
 }
 
 .message {
+  margin: 20px 20px 0 20px;
   padding: 20px;
-  line-height: 25px;
-  max-width: 90%;
   display: inline-block;
   text-align: left;
   border-radius: 5px;
   background-color: #e0f7fa;
-  /* background-color: #ffffff; */
 }
 
 .triangle {
@@ -53,10 +26,8 @@ body {
   height: 0;
   border-style: solid;
   border-width: 20px;
-  /* background-color:rgb(244, 215, 145) ; */
   border-color: #e0f7fa transparent transparent;
-  /* border-color: #ffffff transparent transparent; */
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 section {
