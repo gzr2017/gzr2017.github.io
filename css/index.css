@@ -98,3 +98,13 @@ div.waterfall-img {
 #materialbox-overlay {
   background-color: #e0f7fa;
 }
+
+
+
+.carousel-image {
+  width: 250px;
+  height: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-image;
+}
