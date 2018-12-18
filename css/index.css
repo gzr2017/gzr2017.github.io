@@ -20,7 +20,7 @@
 
 section {
 	margin: 0 auto;
-	column-count: 4;
+	column-count: 3;
 }
 
 div.waterfall-img img {
@@ -33,3 +33,21 @@ div.waterfall-img {
 	break-inside: avoid-column;
 	overflow: hidden;
 }
+
+.tabs .indicator {
+	background-color: #00bcd4;
+
+  }
+
+.tabs .tab a {
+	color: #006064;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+	background-color: #e0f7fa;
+  }
+
+  .tabs .tab a:hover, .tabs .tab a.active {
+	background-color: transparent;
+	color: #00bcd4;
+  }
