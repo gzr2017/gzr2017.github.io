@@ -10,6 +10,8 @@ $('.main-carousel').flickity({
     autoPlay: true,
     draggable: true,
     freeScroll: true,
+    contain: true,
+    pageDots: false,
     wrapAround: true,
     autoPlay: true
 });
