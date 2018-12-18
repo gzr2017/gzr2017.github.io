@@ -1,46 +1,17 @@
-  body {
-    /* background: linear-gradient(180grad, #009688, #009688); */
-    font-family: ubuntu, source-han-sans-simplified-c, sans-serif;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-
-
-  main {
-    flex: 1 0 auto;
-  }
-
-
-  .carousel-wrap {
-    margin: auto;
-    width: 90%;
-  }
-
-  /* fix blank or flashing items on carousel */
-  .owl-carousel .item {
-    position: relative;
-    z-index: 100;
-    -webkit-backface-visibility: hidden;
-  }
-
-  /* end fix */
-  .owl-nav>div {
-    margin-top: -26px;
-    position: absolute;
-    top: 50%;
-    color: #cdcbcd;
-  }
-
-  .owl-nav i {
-    font-size: 52px;
-  }
-
-  .owl-nav .owl-prev {
-    left: -30px;
-  }
-
-  .owl-nav .owl-next {
-    right: -30px;
-  }
+.message{
+	padding:20px;
+	line-height:25px;
+	max-width:90%;
+	display:inline-block;
+	text-align:left;
+    border-radius:5px;
+	background-color:#e0f7fa ;
+}
+.triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width:  10px  ;
+	border-color:  #e0f7fa  transparent  transparent;
+	margin-left:15px;
+}
