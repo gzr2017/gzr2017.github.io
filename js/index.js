@@ -3,6 +3,9 @@ $(document).ready(function () {
     $('.tabs').tabs();
     $('.owl-carousel').owlCarousel();
 });
+$('.tabs').tabs()({
+    swipeable: true
+});
 $('.main-carousel').flickity({
     // options
     cellAlign: 'left',
