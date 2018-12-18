@@ -3,6 +3,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #006064;
+
 }
 
 .carousel-wrap {
@@ -44,7 +45,7 @@ body {
   text-align: left;
   border-radius: 5px;
   background-color: #e0f7fa;
-  /* background-color:rgb(244, 215, 145) ; */
+  /* background-color: #ffffff; */
 }
 
 .triangle {
@@ -54,6 +55,7 @@ body {
   border-width: 20px;
   /* background-color:rgb(244, 215, 145) ; */
   border-color: #e0f7fa transparent transparent;
+  /* border-color: #ffffff transparent transparent; */
   margin-left: 20px;
 }
 
