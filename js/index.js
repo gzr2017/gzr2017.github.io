@@ -9,5 +9,7 @@ $('.main-carousel').flickity({
     contain: true,
     autoPlay: true,
     draggable: true,
-    freeScroll: true
+    freeScroll: true,
+    wrapAround: true,
+    autoPlay: true
 });
