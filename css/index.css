@@ -12,6 +12,10 @@ main {
   flex: 1 0 auto;
 }
 
+.sidenav {
+  width: 50%;
+}
+
 .message {
   margin: 20px 20px 0 20px;
   padding: 20px;
@@ -31,7 +35,7 @@ main {
 }
 
 section {
-  margin: 0 auto;
+  margin: 20px auto;
   column-count: 3;
 }
 
@@ -69,7 +73,6 @@ div.waterfall-img {
 #materialbox-overlay {
   background-color: #e0f7fa;
 }
-
 
 
 .carousel-image {
