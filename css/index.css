@@ -6,6 +6,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
 }
 
 main {
@@ -18,7 +19,7 @@ main {
 
 .message {
 
-  margin: 1.5em 1.5em 0 1.5em;
+  margin: 10px 10px 0 10px;
   padding: 1.5em;
   display: inline-block;
   text-align: left;
@@ -30,13 +31,13 @@ main {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 1.5em;
+  border-width: 10px;
   border-color: #e0f7fa transparent transparent;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 section {
-  margin: 1.5em auto;
+  margin: 20px auto;
   column-count: 3;
 }
 
