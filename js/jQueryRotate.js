@@ -1,6 +1,10 @@
 (function ($) {
-    var supportedCSS, supportedCSSOrigin, styles = document.getElementsByTagName("head")[0].style, toCheck = "transformProperty WebkitTransform OTransform msTransform MozTransform".split(" ");
-    for (var a = 0; a < toCheck.length; a++) if (styles[toCheck[a]] !== undefined) { supportedCSS = toCheck[a]; }
+    var supportedCSS, supportedCSSOrigin, styles = document.getElementsByTagName("head")[0].style,
+        toCheck = "transformProperty WebkitTransform OTransform msTransform MozTransform".split(" ");
+    for (var a = 0; a < toCheck.length; a++)
+        if (styles[toCheck[a]] !== undefined) {
+            supportedCSS = toCheck[a];
+        }
     if (supportedCSS) {
         supportedCSSOrigin = supportedCSS.replace(/[tT]ransform/, "TransformOrigin");
         if (supportedCSSOrigin[0] == "T") supportedCSSOrigin[0] = "t";
@@ -12,7 +16,9 @@
     jQuery.fn.extend({
         rotate: function (parameters) {
             if (this.length === 0 || typeof parameters == "undefined") return;
-            if (typeof parameters == "number") parameters = { angle: parameters };
+            if (typeof parameters == "number") parameters = {
+                angle: parameters
+            };
             var returned = [];
             for (var i = 0, i0 = this.length; i < i0; i++) {
                 var element = this.get(i);
@@ -22,8 +28,7 @@
                     var newRotObject = new Wilq32.PhotoEffect(element, paramClone)._rootObj;
 
                     returned.push($(newRotObject));
-                }
-                else {
+                } else {
                     element.Wilq32.PhotoEffect._handleRotation(parameters);
                 }
             }
@@ -70,10 +75,9 @@
 
                 this._rootObj = document.createElement('span');
                 this._rootObj.style.display = "inline-block";
-                this._rootObj.Wilq32 =
-                    {
-                        PhotoEffect: this
-                    };
+                this._rootObj.Wilq32 = {
+                    PhotoEffect: this
+                };
                 img.parentNode.insertBefore(this._rootObj, img);
 
                 if (img.complete) {
@@ -81,7 +85,9 @@
                 } else {
                     var self = this;
                     // TODO: Remove jQuery dependency
-                    jQuery(this._img).bind("load", function () { self._Loader(); });
+                    jQuery(this._img).bind("load", function () {
+                        self._Loader();
+                    });
                 }
             }
         }
@@ -90,8 +96,12 @@
     Wilq32.PhotoEffect.prototype = {
         _setupParameters: function (parameters) {
             this._parameters = this._parameters || {};
-            if (typeof this._angle !== "number") { this._angle = 0; }
-            if (typeof parameters.angle === "number") { this._angle = parameters.angle; }
+            if (typeof this._angle !== "number") {
+                this._angle = 0;
+            }
+            if (typeof parameters.angle === "number") {
+                this._angle = parameters.angle;
+            }
             this._parameters.animateTo = (typeof parameters.animateTo === "number") ? (parameters.animateTo) : (this._angle);
 
             this._parameters.step = parameters.step || this._parameters.step || null;
@@ -110,10 +120,14 @@
                 this._rotationCenterY = this._parameters.center[1];
             }
 
-            if (parameters.bind && parameters.bind != this._parameters.bind) { this._BindEvents(parameters.bind); }
+            if (parameters.bind && parameters.bind != this._parameters.bind) {
+                this._BindEvents(parameters.bind);
+            }
         },
-        _emptyFunction: function () { },
-        _defaultEasing: function (x, t, b, c, d) { return -c * ((t = t / d - 1) * t * t * t - 1) + b },
+        _emptyFunction: function () {},
+        _defaultEasing: function (x, t, b, c, d) {
+            return -c * ((t = t / d - 1) * t * t * t - 1) + b
+        },
         _handleRotation: function (parameters, dontcheck) {
             if (!supportedCSS && !this._img.complete && !dontcheck) {
                 this._onLoadDelegate.push(parameters);
@@ -122,8 +136,7 @@
             this._setupParameters(parameters);
             if (this._angle == this._parameters.animateTo) {
                 this._rotate(this._angle);
-            }
-            else {
+            } else {
                 this._animateStart();
             }
         },
@@ -133,15 +146,17 @@
                 // Unbinding previous Events
                 if (this._parameters.bind) {
                     var oldEvents = this._parameters.bind;
-                    for (var a in oldEvents) if (oldEvents.hasOwnProperty(a))
-                        // TODO: Remove jQuery dependency
-                        jQuery(this._eventObj).unbind(a, oldEvents[a]);
+                    for (var a in oldEvents)
+                        if (oldEvents.hasOwnProperty(a))
+                            // TODO: Remove jQuery dependency
+                            jQuery(this._eventObj).unbind(a, oldEvents[a]);
                 }
 
                 this._parameters.bind = events;
-                for (var a in events) if (events.hasOwnProperty(a))
-                    // TODO: Remove jQuery dependency
-                    jQuery(this._eventObj).bind(a, events[a]);
+                for (var a in events)
+                    if (events.hasOwnProperty(a))
+                        // TODO: Remove jQuery dependency
+                        jQuery(this._eventObj).bind(a, events[a]);
             }
         },
 
@@ -236,8 +251,7 @@
             // TODO: Bug for animatedGif for static rotation ? (to test)
             if (checkEnd && !this._parameters.animatedGif) {
                 clearTimeout(this._timer);
-            }
-            else {
+            } else {
                 if (this._canvas || this._vimage || this._img) {
                     var angle = this._parameters.easing(0, actualTime - this._animateStartTime, this._animateStartAngle, this._parameters.animateTo - this._animateStartAngle, this._parameters.duration);
                     this._rotate((~~(angle * 10)) / 10);
@@ -282,16 +296,16 @@
                     this._angle = angle;
                     angle = (angle % 360) * rad;
                     // clear canvas
-                    this._canvas.width = this._width;//+this._widthAdd;
-                    this._canvas.height = this._height;//+this._heightAdd;
+                    this._canvas.width = this._width; //+this._widthAdd;
+                    this._canvas.height = this._height; //+this._heightAdd;
 
                     // REMEMBER: all drawings are read from backwards.. so first function is translate, then rotate, then translate, translate..
-                    this._cnv.translate(this._imgWidth * this._aspectW, this._imgHeight * this._aspectH);	// at least center image on screen
-                    this._cnv.translate(this._rotationCenterX, this._rotationCenterY);			// we move image back to its orginal
-                    this._cnv.rotate(angle);										// rotate image
-                    this._cnv.translate(-this._rotationCenterX, -this._rotationCenterY);		// move image to its center, so we can rotate around its center
+                    this._cnv.translate(this._imgWidth * this._aspectW, this._imgHeight * this._aspectH); // at least center image on screen
+                    this._cnv.translate(this._rotationCenterX, this._rotationCenterY); // we move image back to its orginal
+                    this._cnv.rotate(angle); // rotate image
+                    this._cnv.translate(-this._rotationCenterX, -this._rotationCenterY); // move image to its center, so we can rotate around its center
                     this._cnv.scale(this._aspectW, this._aspectH); // SCALE - if needed ;)
-                    this._cnv.drawImage(this._img, 0, 0);							// First - we draw image
+                    this._cnv.drawImage(this._img, 0, 0); // First - we draw image
                 }
 
         })()

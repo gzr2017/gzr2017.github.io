@@ -1,7 +1,7 @@
 var roan = 0;
-var img = document.getElementById('container');
+var img = document.getElementById('rotate_img');
 if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', function (event) {//监听设备陀螺仪
+    window.addEventListener('deviceorientation', function (event) { //监听设备陀螺仪
         if (-45 < event.gamma && event.gamma < 45)
             roan = ((event.gamma) + 45) / 2;
         $("#img").rotate({
@@ -10,5 +10,8 @@ if (window.DeviceOrientationEvent) {
         })
     });
 } else {
-    M.toast({ html: '你的浏览器不支持哦~用移动端试试吧！', classes: 'rounded' });
+    M.toast({
+        html: '你的浏览器不支持哦~用移动端试试吧！',
+        classes: 'rounded'
+    });
 }
