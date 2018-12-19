@@ -8,8 +8,6 @@
 <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/interaction3.css">
 </head>
 
 <body>
@@ -70,7 +68,6 @@
     <img style="display:block;position:absolute;z-index: 0;" width="40%" src="resource/header_footer/title_text.png" id="title_text" />
     <img style="display:block;z-index: 0;" src="resource/header_footer/title_right.png" width="100%" />
 </div>
-
     <main>
         <div class="row blue-grey lighten-5" id="navigator">
         <div class="col s12 l4">
@@ -102,18 +99,12 @@
         <div class="container">
             <div class="card-panel" id="host_card">
                 <style>
-                    #bcg {
-                                        position: absolute;
-                                        z-index: 0;
-                                    };
-                                    #img {
-                                        position: absolute;
-                                        z-index: 1;
-                                    }
-                                </style>
+                    #girl {position: absolute; z-index: 0;};
+                    #fan {position: absolute;z-index: 1;}
+                </style>
                 <div style="position:relative;">
-                    <img src="resource/interaction/inter31.png" id="bcg" width="100%"></div>
-                <img src="resource/interaction/inter32.png" id="img" width="100%">
+                    <img src="resource/interaction/inter31.png" id="girl" width="100%"></div>
+                <img src="resource/interaction/inter32.png" id="fan" width="100%">
             </div>
         </div>
     </main>
@@ -123,10 +114,10 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/index.js"></script>
-    <script type="text/javascript" src="js/jQueryRotate.js"></script>
     <script type="text/javascript" src="js/interaction3.js"></script>
     <script type="text/javascript">
         document.getElementById("illustration-nav").style.display = "none";

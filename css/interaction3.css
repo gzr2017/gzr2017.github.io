@@ -1,0 +1,10 @@
+#bcg {
+    position: absolute;
+    z-index: 0;
+}
+
+
+#img {
+    position: absolute;
+    z-index: 1;
+}
