@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/yxz5ruw.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/interaction2.css">
+  <link type="text/css" rel="stylesheet" href="css/interaction2.css" media="screen,projection" />
 </head>
 
 <body>
-    <div id="slide-out" class="sidenav ">
+  <div id="slide-out" class="sidenav ">
     <div class="message">
         <p class="flow-text ">
             Ruojun bai
@@ -63,14 +63,14 @@
     <div class="triangle"></div>
     <img src="resource/header_footer/dialog.png" width="100%">
 </div>
-    <div style=" background-color: #006064;z-index: -1;">
+  <div style=" background-color: #006064;z-index: -1;">
     <img style="display:block; position:absolute;z-index: -1;" src="resource/header_footer/title_move.png" id="title_move"
         width="100%" />
     <img style="display:block;position:absolute;z-index: 0;" width="40%" src="resource/header_footer/title_text.png" id="title_text" />
     <img style="display:block;z-index: 0;" src="resource/header_footer/title_right.png" width="100%" />
 </div>
-    <main>
-        <div class="row blue-grey lighten-5" id="navigator">
+  <main>
+    <div class="row blue-grey lighten-5" id="navigator">
         <div class="col s12 l4">
                 <p class="center"><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large" style="color: #000000">
                                 ABOUT ME</a></p>
@@ -97,21 +97,25 @@
                 <li class="tab col"><a href="#page6">Watercolor</a></li>
         </ul>
 </div>
-        <div class="container">
-            <div class="card-panel">
-                <div class="solarSystem">
-                    <div class="sun center">
-                        <img src="resource/interaction/inter21.gif">
-                    </div>
-                    <div class="orbit">
-                        <img src="resource/interaction/inter22.png" width="30px">
-                    </div>
+    <div class="container">
+      <div class="card-panel">
+        <div id="universe" class="scale-stretched">
+          <div id="solar-system">
+            <div id="mercury" class="orbit">
+              <div class="pos">
+                <div class="planet">
                 </div>
+              </div>
             </div>
+            <div id="sun">
+            </div>
+          </div>
         </div>
-    </main>
-    <img src="resource/header_footer/bottom.png" width="100%">
-    <div class="blue-grey lighten-5 center">
+      </div>
+    </div>
+  </main>
+  <img src="resource/header_footer/bottom.png" width="100%">
+  <div class="blue-grey lighten-5 center">
     Copyright 2018&copy;Ruojun Bai All rights reserved
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -120,11 +124,10 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/index.js"></script>
-    <script type="text/javascript" src="js/interaction2.js"></script>
-    <script type="text/javascript">
-        document.getElementById("illustration-nav").style.display = "none";
-        document.getElementById("mic").style.textDecoration = "underline";
-    </script>
+  <script type="text/javascript">
+    document.getElementById("illustration-nav").style.display = "none";
+    document.getElementById("mic").style.textDecoration = "underline";
+  </script>
 </body>
 
 </html>
