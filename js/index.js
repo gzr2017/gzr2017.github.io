@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('.tabs').tabs()({
         swipeable: true
     });
-    $('.owl-carousel').owlCarousel();
 });
 $('.main-carousel').flickity({
     autoPlay: true,

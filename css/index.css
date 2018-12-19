@@ -17,8 +17,9 @@ main {
 }
 
 .message {
-  margin: 20px 20px 0 20px;
-  padding: 20px;
+
+  margin: 1.5em 1.5em 0 1.5em;
+  padding: 1.5em;
   display: inline-block;
   text-align: left;
   border-radius: 5px;
@@ -29,13 +30,13 @@ main {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 20px;
+  border-width: 1.5em;
   border-color: #e0f7fa transparent transparent;
   margin-left: 40px;
 }
 
 section {
-  margin: 20px auto;
+  margin: 1.5em auto;
   column-count: 3;
 }
 
