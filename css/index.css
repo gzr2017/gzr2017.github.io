@@ -84,3 +84,20 @@ div.waterfall-img {
   border-radius: 5px;
   counter-increment: carousel-image;
 }
+
+
+.car {
+  animation-name: drive;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
