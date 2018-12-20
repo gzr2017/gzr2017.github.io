@@ -98,10 +98,19 @@
 </div>
         <div class="container">
             <div class="card-panel">
-                <img style="margin-left: auto; margin-right:auto; display:block; position:absolute;" src="resource/interaction/inter12.png"
-                    id="rotate_img" width="100%">
-                <img style="margin-left: auto; margin-right:auto; display:block;z-index: -1;" src="resource/interaction/inter11.png"
-                    id="bcg" width="100%" />
+                <style>
+                    #girl {position: absolute; z-index: 0;};
+                    #blue-flower {position: absolute;z-index: 1;};
+                    #red-flower {position: absolute;}
+                </style>
+                <div style="position:relative;">
+                    <img src="resource/interaction/inter11.gif" id="girl" width="100%">
+                    <img src="resource/interaction/inter12.png" id="blue-flower" width="100%">
+                    <img src="resource/interaction/inter13.png" id="red-flower" width="100%">
+                </div>
+                <div class="card-content">
+                    <p><a href="man_in_case.html" style="color: #006064;">Back</a></p>
+                </div>
             </div>
         </div>
     </main>
